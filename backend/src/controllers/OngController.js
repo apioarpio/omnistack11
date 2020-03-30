@@ -19,6 +19,7 @@ module.exports = {
         return res.status(201).json({id})
     },
     async getOngs(req, res) {
+        console.log('ongs')
         const ongs = await connection('ongs').select('*');
         return res.status(200).json(ongs);
     }
